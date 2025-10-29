@@ -1,0 +1,58 @@
+# Security Contacts - UniBar Project
+
+## Primary Security Contact
+
+**Name**: Moshe Leon Yaakubov (AnLoMinus)  
+**Email**: anlominus@example.com  
+**GitHub**: @AnLoMinus  
+**Role**: Project Maintainer & Security Lead  
+
+## Security Team
+
+### Core Security Team
+- **Moshe Leon Yaakubov** - anlominus@example.com - @AnLoMinus
+- **Security Team** - security@unibar.dev - @UniBarSecurity
+
+### Backup Contacts
+- **GitHub Issues**: [Security Issues](https://github.com/AnLoMinus/UniBar/issues/new?template=security.md)
+- **Discord**: #security channel
+- **Email**: security@unibar.dev
+
+## Reporting Security Issues
+
+### For Critical Security Issues
+1. **Email**: anlominus@example.com
+2. **Subject**: [SECURITY] Critical Vulnerability Report
+3. **Response Time**: Within 24 hours
+
+### For General Security Issues
+1. **GitHub Issues**: Use security template
+2. **Discord**: #security channel
+3. **Response Time**: Within 72 hours
+
+## Security Response Process
+
+1. **Acknowledgment**: Within 24 hours for critical issues
+2. **Initial Assessment**: Within 72 hours
+3. **Fix Development**: Based on severity
+4. **Disclosure**: Coordinated with reporter
+
+## Security Team Responsibilities
+
+- Review security reports
+- Coordinate vulnerability disclosures
+- Maintain security documentation
+- Monitor security tools and alerts
+- Coordinate with external security researchers
+
+## Contact Information
+
+- **Primary Email**: anlominus@example.com
+- **Security Email**: security@unibar.dev
+- **GitHub**: @AnLoMinus
+- **Discord**: UniBar Community #security
+
+---
+
+**Last Updated**: 2025-01-28  
+**Next Review**: 2025-04-28

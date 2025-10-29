@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="🧭 UniBar - סרגלי עזר אוניברסליים עם תכונות מיסטיות וניווט חכם">
+    <meta name="keywords" content="unibar, navigation, ui, components, hebrew, rtl, accessibility">
+    <meta name="author" content="Moshe Leon Yaakubov (AnLoMinus)">
+
+    <title>UniBar - סרגלי עזר אוניברסליים 🧭✨</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🧭%3C/text%3E%3C/svg%3E">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Meta tags for social sharing -->
+    <meta property="og:title" content="UniBar - סרגלי עזר אוניברסליים">
+    <meta property="og:description" content="מסגרת מתקדמת לניווט וחוויית משתמש משופרת עם תכונות מיסטיות">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/AnLoMinus/UniBar">
+    <meta property="og:image" content="https://raw.githubusercontent.com/AnLoMinus/UniBar/main/assets/og-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="UniBar - סרגלי עזר אוניברסליים">
+    <meta name="twitter:description" content="מסגרת מתקדמת לניווט וחוויית משתמש משופרת">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/AnLoMinus/UniBar/main/assets/og-image.png">
+</head>
+
+<body>
+    <!-- UniBar Navigation -->
+    <nav id="unibar" class="unibar unibar--mystical">
+        <div class="unibar__container">
+            <!-- Logo and Brand -->
+            <div class="unibar__brand">
+                <a href="#" class="unibar__logo">
+                    <span class="unibar__logo-icon">🧭</span>
+                    <span class="unibar__logo-text">UniBar</span>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <div class="unibar__nav">
+                <ul class="unibar__nav-list">
+                    <li class="unibar__nav-item">
+                        <a href="#home" class="unibar__nav-link active">בית</a>
+                    </li>
+                    <li class="unibar__nav-item">
+                        <a href="#features" class="unibar__nav-link">תכונות</a>
+                    </li>
+                    <li class="unibar__nav-item">
+                        <a href="#docs" class="unibar__nav-link">תיעוד</a>
+                    </li>
+                    <li class="unibar__nav-item">
+                        <a href="#examples" class="unibar__nav-link">דוגמאות</a>
+                    </li>
+                    <li class="unibar__nav-item">
+                        <a href="#contact" class="unibar__nav-link">צור קשר</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Search Component -->
+            <div class="unibar__search">
+                <div class="unibar__search-container">
+                    <input type="text" class="unibar__search-input" placeholder="חפש...">
+                    <button class="unibar__search-button" aria-label="חיפוש">
+                        <span class="unibar__search-icon">🔍</span>
+                    </button>
+                </div>
+                <div class="unibar__search-results" id="searchResults"></div>
+            </div>
+
+            <!-- Theme Switcher -->
+            <div class="unibar__themes">
+                <button class="unibar__theme-toggle" id="themeToggle" aria-label="החלף תמה">
+                    <span class="unibar__theme-icon">🌙</span>
+                </button>
+                <div class="unibar__theme-menu" id="themeMenu">
+                    <button class="unibar__theme-option" data-theme="mystical">מיסטי</button>
+                    <button class="unibar__theme-option" data-theme="modern">מודרני</button>
+                    <button class="unibar__theme-option" data-theme="classic">קלאסי</button>
+                    <button class="unibar__theme-option" data-theme="dark">כהה</button>
+                    <button class="unibar__theme-option" data-theme="light">בהיר</button>
+                </div>
+            </div>
+
+            <!-- Settings -->
+            <div class="unibar__settings">
+                <button class="unibar__settings-toggle" id="settingsToggle" aria-label="הגדרות">
+                    <span class="unibar__settings-icon">⚙️</span>
+                </button>
+                <div class="unibar__settings-menu" id="settingsMenu">
+                    <div class="unibar__settings-section">
+                        <h3>שפה</h3>
+                        <select class="unibar__settings-select">
+                            <option value="he">עברית</option>
+                            <option value="en">English</option>
+                            <option value="ar">العربية</option>
+                        </select>
+                    </div>
+                    <div class="unibar__settings-section">
+                        <h3>גודל גופן</h3>
+                        <input type="range" class="unibar__settings-range" min="12" max="24" value="16">
+                    </div>
+                    <div class="unibar__settings-section">
+                        <h3>נגישות</h3>
+                        <label class="unibar__settings-checkbox">
+                            <input type="checkbox" checked>
+                            <span>הדגשת קישורים</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="unibar__mobile-toggle" id="mobileToggle" aria-label="תפריט נייד">
+                <span class="unibar__mobile-icon">☰</span>
+            </button>
+        </div>
+
+        <!-- Breadcrumbs -->
+        <div class="unibar__breadcrumbs" id="breadcrumbs">
+            <nav class="unibar__breadcrumbs-nav">
+                <a href="#" class="unibar__breadcrumbs-home">🏠</a>
+                <span class="unibar__breadcrumbs-separator">›</span>
+                <span class="unibar__breadcrumbs-current">בית</span>
+            </nav>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        ברוכים הבאים ל-<span class="hero__title-highlight">UniBar</span>
+                    </h1>
+                    <p class="hero__subtitle">
+                        סרגלי עזר אוניברסליים עם תכונות מיסטיות וניווט חכם
+                    </p>
+                    <div class="hero__actions">
+                        <button class="btn btn--primary" id="getStartedBtn">
+                            התחל עכשיו
+                        </button>
+                        <button class="btn btn--secondary" id="viewDocsBtn">
+                            צפה בתיעוד
+                        </button>
+                    </div>
+                </div>
+                <div class="hero__visual">
+                    <div class="hero__demo">
+                        <div class="hero__demo-bar">
+                            <div class="hero__demo-item"></div>
+                            <div class="hero__demo-item"></div>
+                            <div class="hero__demo-item"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="features__container">
+                <h2 class="features__title">תכונות מתקדמות</h2>
+                <div class="features__grid">
+                    <div class="feature-card">
+                        <div class="feature-card__icon">🧭</div>
+                        <h3 class="feature-card__title">ניווט חכם</h3>
+                        <p class="feature-card__description">
+                            מערכת ניווט מתקדמת עם breadcrumbs וניווט מהיר
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card__icon">🔍</div>
+                        <h3 class="feature-card__title">חיפוש מהיר</h3>
+                        <p class="feature-card__description">
+                            חיפוש מתקדם ויעיל עם תוצאות בזמן אמת
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card__icon">⌨️</div>
+                        <h3 class="feature-card__title">קיצורי מקלדת</h3>
+                        <p class="feature-card__description">
+                            קיצורי מקלדת מותאמים אישית לכל פונקציה
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card__icon">🎨</div>
+                        <h3 class="feature-card__title">תמות מותאמות</h3>
+                        <p class="feature-card__description">
+                            מערכת תמות מתקדמת עם אפשרויות התאמה מלאות
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card__icon">♿</div>
+                        <h3 class="feature-card__title">נגישות מלאה</h3>
+                        <p class="feature-card__description">
+                            תמיכה מלאה בנגישות ותקני WCAG
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card__icon">📱</div>
+                        <h3 class="feature-card__title">רספונסיבי</h3>
+                        <p class="feature-card__description">
+                            עיצוב רספונסיבי שעובד בכל המכשירים
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Examples Section -->
+        <section id="examples" class="examples">
+            <div class="examples__container">
+                <h2 class="examples__title">דוגמאות חיות</h2>
+                <div class="examples__grid">
+                    <div class="example-card">
+                        <h3 class="example-card__title">דוגמה בסיסית</h3>
+                        <p class="example-card__description">
+                            דוגמה פשוטה להתחלה מהירה עם UniBar
+                        </p>
+                        <button class="btn btn--outline" data-example="basic">
+                            צפה בדוגמה
+                        </button>
+                    </div>
+                    <div class="example-card">
+                        <h3 class="example-card__title">דוגמה עם React</h3>
+                        <p class="example-card__description">
+                            אינטגרציה מלאה עם React
+                        </p>
+                        <button class="btn btn--outline" data-example="react">
+                            צפה בדוגמה
+                        </button>
+                    </div>
+                    <div class="example-card">
+                        <h3 class="example-card__title">דוגמה עם Vue</h3>
+                        <p class="example-card__description">
+                            אינטגרציה מלאה עם Vue
+                        </p>
+                        <button class="btn btn--outline" data-example="vue">
+                            צפה בדוגמה
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="contact__container">
+                <h2 class="contact__title">צור קשר</h2>
+                <div class="contact__content">
+                    <div class="contact__info">
+                        <h3>בואו נשמור על קשר</h3>
+                        <p>
+                            יש לך שאלות או הצעות? אנחנו כאן לעזור!
+                        </p>
+                        <div class="contact__links">
+                            <a href="mailto:anlominus@example.com" class="contact__link">
+                                📧 anlominus@example.com
+                            </a>
+                            <a href="https://github.com/AnLoMinus/UniBar" class="contact__link" target="_blank"
+                                rel="noopener noreferrer">
+                                🐙 GitHub Repository
+                            </a>
+                            <a href="https://github.com/AnLoMinus/UniBar/issues" class="contact__link" target="_blank"
+                                rel="noopener noreferrer">
+                                🐛 דיווח על באגים
+                            </a>
+                            <a href="https://github.com/AnLoMinus/UniBar/discussions" class="contact__link"
+                                target="_blank" rel="noopener noreferrer">
+                                💬 דיונים
+                            </a>
+                            <a href="https://github.com/AnLoMinus/UniBar/wiki" class="contact__link" target="_blank"
+                                rel="noopener noreferrer">
+                                📚 Wiki
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact__form">
+                        <form class="form">
+                            <div class="form__group">
+                                <label for="name" class="form__label">שם</label>
+                                <input type="text" id="name" class="form__input" required>
+                            </div>
+                            <div class="form__group">
+                                <label for="email" class="form__label">אימייל</label>
+                                <input type="email" id="email" class="form__input" required>
+                            </div>
+                            <div class="form__group">
+                                <label for="message" class="form__label">הודעה</label>
+                                <textarea id="message" class="form__textarea" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--primary">
+                                שלח הודעה
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <span class="footer__logo">🧭</span>
+                    <span class="footer__text">UniBar</span>
+                </div>
+                <div class="footer__links">
+                    <a href="#home" class="footer__link">בית</a>
+                    <a href="#features" class="footer__link">תכונות</a>
+                    <a href="#docs" class="footer__link">תיעוד</a>
+                    <a href="#examples" class="footer__link">דוגמאות</a>
+                    <a href="#contact" class="footer__link">צור קשר</a>
+                </div>
+                <div class="footer__social">
+                    <a href="https://github.com/AnLoMinus" class="footer__social-link" target="_blank"
+                        rel="noopener noreferrer" title="GitHub Profile">🐙</a>
+                    <a href="https://github.com/AnLoMinus/UniBar" class="footer__social-link" target="_blank"
+                        rel="noopener noreferrer" title="Repository">📦</a>
+                    <a href="https://github.com/AnLoMinus/UniBar/issues" class="footer__social-link" target="_blank"
+                        rel="noopener noreferrer" title="Issues">🐛</a>
+                    <a href="https://github.com/AnLoMinus/UniBar/discussions" class="footer__social-link"
+                        target="_blank" rel="noopener noreferrer" title="Discussions">💬</a>
+                    <a href="mailto:anlominus@example.com" class="footer__social-link" title="Email">📧</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    © 2025 Moshe Leon Yaakubov (AnLoMinus). כל הזכויות שמורות.
+                </p>
+                <p class="footer__license">
+                    מופץ תחת רישיון MIT
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>

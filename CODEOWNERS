@@ -1,0 +1,58 @@
+# CODEOWNERS - UniBar Project
+
+# Global owners
+* @AnLoMinus
+
+# Documentation
+*.md @AnLoMinus
+docs/ @AnLoMinus
+
+# Configuration files
+package.json @AnLoMinus
+tsconfig.json @AnLoMinus
+vite.config.ts @AnLoMinus
+.eslintrc.js @AnLoMinus
+.prettierrc @AnLoMinus
+
+# GitHub workflows
+.github/ @AnLoMinus
+
+# Security files
+SECURITY.md @AnLoMinus
+SECURITY_CONTACTS @AnLoMinus
+
+# License and legal
+LICENSE @AnLoMinus
+CODE_OF_CONDUCT.md @AnLoMinus
+
+# Core source code
+src/ @AnLoMinus
+src/components/ @AnLoMinus
+src/hooks/ @AnLoMinus
+src/utils/ @AnLoMinus
+src/types/ @AnLoMinus
+
+# Tests
+tests/ @AnLoMinus
+src/**/*.test.ts @AnLoMinus
+src/**/*.test.tsx @AnLoMinus
+
+# Build and deployment
+dist/ @AnLoMinus
+build/ @AnLoMinus
+
+# Assets and static files
+public/ @AnLoMinus
+assets/ @AnLoMinus
+
+# Examples and demos
+examples/ @AnLoMinus
+demo/ @AnLoMinus
+
+# Scripts
+scripts/ @AnLoMinus
+
+# Dependencies
+package-lock.json @AnLoMinus
+yarn.lock @AnLoMinus
+pnpm-lock.yaml @AnLoMinus
